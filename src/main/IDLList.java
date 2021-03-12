@@ -149,5 +149,7 @@ public class IDLList<E> {
 	}
 	private void updateSize() {
 		size = indices.size();
+		head = indices.get(0);
+		tail = indices.get(size-1);
 	}
 }
