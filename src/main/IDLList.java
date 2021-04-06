@@ -198,4 +198,28 @@ public class IDLList<E> {
 		head = indices.get(0);
 		tail = indices.get(size-1);
 	}
+	public static int[] merge(int[] a, int[] b) {
+		int[] merged = new int[a.length+b.length];
+		int aInd = 0;
+		int bInd = 0;
+		
+		for(int i = 0; i < merged.length; i++) {
+			if(bInd >= b.length) {
+				merged[i] = a[aInd];
+				aInd++;
+			} else if (aInd >= a.length) {
+				merged[i] = b[bInd];
+				bInd++;
+			}
+			if(a[aInd] <= b[bInd]) {
+				merged[i] = a[aInd];
+				aInd++;
+			} else {
+				merged[i] = b[bInd];
+				bInd++;
+			}
+		}
+		
+		return merged;
+	}
 }
