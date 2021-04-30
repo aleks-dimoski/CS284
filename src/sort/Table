@@ -1,0 +1,10 @@
+Name    	Wall Clock	Num Swaps	Complexity Class
+Selection	9		1494		O(n^2)
+Insertion	6		4000		O(n^2)
+Bubble		3		1516		O(n^2)
+Heap		6		1959		O(nlogn)
+Merge		4		1759		O(nlogn)
+Quick		6		2379		O(n^2)
+
+Tested 100 times sorting 2 6 value long arrays (one date array of length 6,
+one firstnames array of length 6).
